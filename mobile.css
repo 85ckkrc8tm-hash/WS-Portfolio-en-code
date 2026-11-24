@@ -1,0 +1,36 @@
+.nom {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nom img {
+    max-width: 100%;
+}
+
+.boite { display: none; }
+.active.boite { display: none; }
+.informations { text-align:center }
+.projet { grid-template-columns: 1fr; }
+.informations { position: static; padding: 100px 20px 30px; }
+.galerie { gap: 30px; }
+.galerie { margin-top: 20px;}
+.project img:hover {
+  opacity: 100%;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 10px 0px;
+}
+
+.colonne {
+  display: contents;
+}
+
+.project {
+  order: var(--n);
+}
