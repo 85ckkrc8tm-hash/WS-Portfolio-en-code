@@ -1,21 +1,22 @@
 @font-face {
-  font-family: "Poppind-Medium";
-  src: url("fonts/Poppins-Medium.ttf") format("truetype");
+  font-family: HelveticaBQ;
+  font-weight: normal;
+  src: url("fonts/Helvetica - Berthold/HelveticaBQ-Bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "Poppins-Thin";
-  src: url("fonts/Poppins-Thin.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("fonts/Helvetica - Berthold/HelveticaBQ-Roman.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Helvetica_Light";
+  font-family: HelveticaBQ;
+  font-weight: lighter;
   src: url("fonts/Helvetica - Berthold/HelveticaBQ-Light.otf") format("opentype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
 }
 
 .nom {
@@ -35,12 +36,14 @@
 
 header
 .conteneur {
-  display: flex; /* Place les enfants côte à côte */
-  margin-left: 250px
+  display: flex;
+  margin-left: 250px;
+  justify-content: left;
+  gap: 20px;
+  padding-right: 100px;
 }
 
 .boite {
-  font-family: "Helvetica_Light";
   font-size: 26px;
   width: 100px;
   height: 26px;
@@ -94,29 +97,49 @@ a:hover {
   min-width: 0;
 }
 
+.project {
+  position: relative;
+}
+
 .project img,
 .project video {
   width: 100%;
   height: auto;
-  display: block;         /* évite le petit espace sous les images */
+  display: block;    
+  transition: opacity .5s ease-in;
 }
 
 .project img:hover {
-  opacity: 25%;
+  opacity: 40%;
 }
 
 .project video:hover {
-  opacity: 25%;
+  opacity: 40%;
+}
+
+.project h2 {
+  font-size: 18px;
+  top: 50%;
+  transform:translate(0,-50%);
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease-out;
+}
+
+.project:hover h2 {
+  opacity: 1;
 }
 
 h1{
-    font-family: "Helvetica";
     font-size: 12px;
     text-align:center; 
     margin: 20px 0px;
 }
 
-/* Header fixe, au-dessus des images comme sur la référence */
 header {
   position: fixed;
   top: 0;
@@ -125,21 +148,20 @@ header {
   z-index: 10;
 }
 
-/* Deux colonnes : texte 33% / images 56% (il reste ~11% vide à droite) */
 .projet {
   display: grid;
   grid-template-columns: 33% 56% 11%;
 }
 
-/* Colonne texte : reste en place pendant que les images défilent */
+
 .informations {
   position: sticky;
   top: 0;
-  align-self: start;      /* indispensable pour que sticky fonctionne dans un grid */
+  align-self: start;
   padding: 200px 40px 0 30px;
 }
 
-/* Colonne images : empilées, avec de l'air entre elles */
+
 .galerie {
   display: flex;
   flex-direction: column;
@@ -148,7 +170,7 @@ header {
   padding-bottom: 90px;
 }
 
-.galerie img {
+.galerie img, .galerie video {
   display: block;
   width: 100%;
   height: auto;
@@ -156,26 +178,23 @@ header {
 
 /* Typo du bloc texte */
 .informations h2 {
-  font-family: "Helvetica";
   font-size: 18px;
   margin: 0 0 40px 0;
 }
 
 .informations h4 {
-  font-family: "Helvetica";
   font-size: 18px;
   margin: 0 0 4px 0;
 }
 
 .informations h3 {
-  font-family: "Helvetica_Light";
+  font-weight: lighter;
   font-size: 18px;
   margin: 0 0 30px 0;
 }
 
 
 .informations h5 {
-  font-family: "Helvetica";
   font-size: 18px;
   position: fixed;
 }
@@ -188,14 +207,14 @@ header {
 }
 
 .informations h6 {
-  font-family: "Helvetica_Light";
+  font-weight: lighter;
   font-size: 18px;
   text-decoration: none;
   color: black;
 }
 
 .informations h6:hover {
-  font-family: "Helvetica_Light";
+  font-weight: lighter;
   font-size: 18px;
   text-decoration-line: underline;
   text-decoration-color: black;
@@ -210,6 +229,5 @@ header {
 }
 
 .navigation-projet a {
-  font-family: "Helvetica";
   font-size: 18px;
 }

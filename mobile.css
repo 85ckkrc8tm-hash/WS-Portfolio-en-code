@@ -40,6 +40,9 @@ body {
 .project video:hover {
   opacity: 100%;
 }
+.project h2 {
+    display: none;
+}
 
 .projects {
     display: flex;
