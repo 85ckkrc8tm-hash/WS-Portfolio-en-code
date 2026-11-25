@@ -1,24 +1,30 @@
 .nom {
-    position:fixed;
-    display: flex;
+    position: fixed;
+    inset: 15px 0 auto 0;
     width: 100%;
-    height: auto;
-    z-index: 9999;
-    isolation: auto;
+    margin: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 65px;
-    margin-left: auto;
-    margin-right: auto;
-    mix-blend-mode:overlay;
+    z-index: 1000;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.nom a {
+    display: block;
+    pointer-events: auto;
 }
 
 .nom img {
-    display:block;
-    max-width: 100%;
-    transform: scale(3.5);
-    transform-origin: center center;
-    mix-blend-mode:overlay;
+    display: block;
+    width: 500px;
+    height: auto;
+    filter: invert(1);
+}
+
+body {
+    background: white; /* fond explicite pour que le blend ait quelque chose à inverser */
 }
 
 .boite { display: none; }
@@ -31,16 +37,34 @@
 .project img:hover {
   opacity: 100%;
 }
+.project video:hover {
+  opacity: 100%;
+}
+
 .projects {
-  display: flex;
-  flex-direction: column;
-  padding: 80px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 10px 0;
+
+    position: relative;
+    z-index: 1;
 }
 
 .colonne {
-  display: contents;
+    display: contents;
 }
 
 .project {
-  order: var(--n);
+    order: var(--n);
+    position: relative;
+    z-index: auto;
+}
+
+.project img,
+.project video {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: auto;
 }
