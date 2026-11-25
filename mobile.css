@@ -1,14 +1,24 @@
 .nom {
+    position:fixed;
     display: flex;
     width: 100%;
     height: auto;
+    z-index: 9999;
+    isolation: auto;
     justify-content: center;
     align-items: center;
+    margin-top: 65px;
     margin-left: auto;
     margin-right: auto;
+    mix-blend-mode:overlay;
 }
+
 .nom img {
+    display:block;
     max-width: 100%;
+    transform: scale(3.5);
+    transform-origin: center center;
+    mix-blend-mode:overlay;
 }
 
 .boite { display: none; }
