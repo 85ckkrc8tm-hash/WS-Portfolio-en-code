@@ -267,6 +267,8 @@ header {
 }
 
 .navigation-projet {
+  font-family: 'Franklin';
+  font-weight: normal;
   display: flex;
   justify-content: space-between;
   padding: 30px;
