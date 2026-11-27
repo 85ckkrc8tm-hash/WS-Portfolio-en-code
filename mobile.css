@@ -29,7 +29,7 @@ body {
 
 .boite { display: none; }
 .active.boite { display: none; }
-.informations { text-align:center }
+.informations { text-align:center; margin: 0 20px 30px 20px; }
 .projet { grid-template-columns: 1fr; }
 .informations { position: static; padding: 100px 20px 30px; }
 .galerie { gap: 30px; }

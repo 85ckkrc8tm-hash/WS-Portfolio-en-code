@@ -10,13 +10,47 @@
   src: url("fonts/Helvetica - Berthold/HelveticaBQ-Light.otf") format("opentype");
 }
 
+@font-face {
+  font-family: Helvetica;
+  font-weight: normal;
+  src: url("fonts/HelveticaNeue.ttc") format("truetype");
+}
+
+@font-face {
+  font-family: Garamond;
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Garamond/EBGaramond-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Garamond;
+  font-style: italic;
+  src: url("fonts/Garamond/EBGaramond-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Garamond;
+  font-weight: bold;
+  src: url("fonts/Garamond/EBGaramond-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Franklin';
+  font-weight: normal;
+  src: url("fonts/FranklinITCBQ-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Franklin';
+  font-weight: bold;
+  src: url("fonts/FrankGothBTRoman.ttf") format("truetype");
+}
+
+
 * {
   padding: 0;
   margin: 0;
-}
-
-body {
-  font-family: Helvetica, sans-serif;
 }
 
 .nom {
@@ -25,7 +59,7 @@ body {
   left: 0;
   z-index: 11;
   margin: 25px 0 0 30px;
-  mix-blend-mode:normal;
+  mix-blend-mode: normal;
 }
 
 .nom img {
@@ -44,6 +78,8 @@ header
 }
 
 .boite {
+  font-family: 'Franklin';
+  font-weight: normal;
   font-size: 26px;
   width: 100px;
   height: 26px;
@@ -118,6 +154,8 @@ a:hover {
 }
 
 .project h2 {
+  font-family: Garamond;
+  font-style: italic;
   font-size: 18px;
   top: 50%;
   transform:translate(0,-50%);
@@ -156,7 +194,7 @@ header {
 
 .informations {
   position: sticky;
-  top: 0;
+  top: 0px;
   align-self: start;
   padding: 200px 40px 0 30px;
 }
@@ -166,7 +204,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 150px;
+  margin-top: 200px;
   padding-bottom: 90px;
 }
 
@@ -178,23 +216,29 @@ header {
 
 /* Typo du bloc texte */
 .informations h2 {
+  font-family: Garamond;
+  font-style: italic;
   font-size: 18px;
-  margin: 0 0 40px 0;
+  margin: 0px 0 20px 0;
 }
 
 .informations h4 {
+  font-family: 'Franklin';
+  font-weight: normal;
   font-size: 18px;
   margin: 0 0 4px 0;
 }
 
 .informations h3 {
-  font-weight: lighter;
+  font-family: Garamond;
+  font-style: italic;
   font-size: 18px;
   margin: 0 0 30px 0;
 }
 
 
 .informations h5 {
+  font-weight: normal;
   font-size: 18px;
   position: fixed;
 }
@@ -230,4 +274,13 @@ header {
 
 .navigation-projet a {
   font-size: 18px;
+}
+
+.header {
+  width: auto;
+  height: 200px;
+}
+
+.header img{
+  width: 100%;
 }
